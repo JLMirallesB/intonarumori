@@ -3,6 +3,8 @@ const video2 = document.getElementById("video2");
 const video3 = document.getElementById("video3");
 const playToggle = document.getElementById("playToggle");
 const mixSlider = document.getElementById("mixSlider");
+const tonePercent = document.getElementById("tonePercent");
+const noisePercent = document.getElementById("noisePercent");
 const volumeSlider = document.getElementById("volumeSlider");
 const loopToggle = document.getElementById("loopToggle");
 const overlayTop = document.getElementById("overlay-top");
@@ -108,6 +110,11 @@ function setMode(nextMode) {
 function updateMix() {
   const mix = parseFloat(mixSlider.value);
   mixSlider.setAttribute("aria-valuenow", mix.toFixed(2));
+
+  const toneValue = Math.round((1 - mix) * 100);
+  const noiseValue = Math.round(mix * 100);
+  if (tonePercent) tonePercent.textContent = `${toneValue}%`;
+  if (noisePercent) noisePercent.textContent = `${noiseValue}%`;
 
   if (!audioCtx || mode !== "combinada") {
     updateOverlay();
