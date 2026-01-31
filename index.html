@@ -10,6 +10,11 @@
     <main class="app">
       <header class="hero">
         <h1>Intonarumori</h1>
+        <p class="subtitle">
+          APP interactiva para separar los componentes tonales y de ruido de
+          <a href="https://elpulpoenelvaso.jlmirall.es/?p=549" target="_blank" rel="noopener">Risveglio di una città</a>
+          de Luigi Russolo; acompaña al trabajo "Russolo: lógica y (n)coherencias" realizado por José Luis Miralles Bono
+        </p>
       </header>
 
       <section class="player" aria-label="Reproductor audiovisual">
@@ -55,8 +60,8 @@
               aria-valuenow="0.5"
             />
             <div class="slider-labels">
-              <span>Tono</span>
-              <span>Ruido</span>
+              <span>Tono <strong id="tonePercent">50%</strong></span>
+              <span>Ruido <strong id="noisePercent">50%</strong></span>
             </div>
           </div>
 

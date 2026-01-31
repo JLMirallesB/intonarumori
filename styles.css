@@ -42,6 +42,18 @@ body {
   margin: 0 0 10px;
 }
 
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  max-width: 900px;
+  line-height: 1.5;
+}
+
+.subtitle a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
 .player {
   display: grid;
   gap: 22px;
