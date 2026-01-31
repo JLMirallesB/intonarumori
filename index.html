@@ -13,14 +13,6 @@
       </header>
 
       <section class="player" aria-label="Reproductor audiovisual">
-        <div class="video-stage">
-          <video id="video1" class="video active" src="Video 1.mp4" playsinline preload="auto"></video>
-          <video id="video2" class="video" src="Video 2.mp4" playsinline preload="auto" muted></video>
-          <video id="video3" class="video" src="Video 3.mp4" playsinline preload="auto" muted></video>
-          <div id="overlay-top" class="overlay top"></div>
-          <div id="overlay-bottom" class="overlay bottom"></div>
-        </div>
-
         <div class="controls">
           <button id="playToggle" class="primary">Reproducir</button>
 
@@ -90,6 +82,14 @@
               Reproducir en bucle
             </label>
           </div>
+        </div>
+
+        <div class="video-stage">
+          <video id="video1" class="video active" src="Video 1.mp4" playsinline preload="auto"></video>
+          <video id="video2" class="video" src="Video 2.mp4" playsinline preload="auto" muted></video>
+          <video id="video3" class="video" src="Video 3.mp4" playsinline preload="auto" muted></video>
+          <div id="overlay-top" class="overlay top"></div>
+          <div id="overlay-bottom" class="overlay bottom"></div>
         </div>
       </section>
     </main>
