@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intonarumori</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>Intonarumori</h1>
+      </header>
+
+      <section class="player" aria-label="Reproductor audiovisual">
+        <div class="video-stage">
+          <video id="video1" class="video active" src="Video 1.mp4" playsinline preload="auto"></video>
+          <video id="video2" class="video" src="Video 2.mp4" playsinline preload="auto" muted></video>
+          <video id="video3" class="video" src="Video 3.mp4" playsinline preload="auto" muted></video>
+          <div id="overlay-top" class="overlay top"></div>
+          <div id="overlay-bottom" class="overlay bottom"></div>
+        </div>
+
+        <div class="controls">
+          <button id="playToggle" class="primary">Reproducir</button>
+
+          <div class="control-block">
+            <span class="control-title">Video visible</span>
+            <div class="control-row" role="group" aria-label="Selector de video">
+              <button class="pill active" data-video="1">Video 1 · Espectrograma</button>
+              <button class="pill" data-video="2">Video 2 · 6 compases</button>
+              <button class="pill" data-video="3">Video 3 · 7 compases</button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <span class="control-title">Modo de audición</span>
+            <div class="control-row" role="radiogroup" aria-label="Modo de audición">
+              <label class="radio">
+                <input type="radio" name="mode" value="separada" checked />
+                Separada
+              </label>
+              <label class="radio">
+                <input type="radio" name="mode" value="combinada" />
+                Combinada
+              </label>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <label class="control-title" for="mixSlider">Mezcla (tono ⇄ ruido)</label>
+            <input
+              id="mixSlider"
+              class="slider"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.5"
+              disabled
+              aria-valuemin="0"
+              aria-valuemax="1"
+              aria-valuenow="0.5"
+            />
+            <div class="slider-labels">
+              <span>Tono</span>
+              <span>Ruido</span>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <label class="control-title" for="volumeSlider">Volumen</label>
+            <input
+              id="volumeSlider"
+              class="slider"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+              aria-valuemin="0"
+              aria-valuemax="1"
+              aria-valuenow="1"
+            />
+          </div>
+
+          <div class="control-block">
+            <label class="checkbox">
+              <input id="loopToggle" type="checkbox" />
+              Reproducir en bucle
+            </label>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>App creada por <a class="footer-link" href="https://www.jlmirall.es" target="_blank" rel="noopener">José Luis Miralles Bono</a> con ayuda de Codex.</span>
+      <a class="pill secondary" href="https://ko-fi.com/miralles" target="_blank" rel="noopener">Invitar a una horchata</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
