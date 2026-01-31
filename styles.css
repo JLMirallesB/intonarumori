@@ -2,6 +2,7 @@
   --bg: #0c0b10;
   --panel: #14131b;
   --accent: #f4b860;
+  --link: #ffd9a6;
   --text: #f6f5f2;
   --muted: #b0a9a0;
   --stroke: #2a2836;
@@ -50,12 +51,15 @@ body {
 }
 
 .subtitle a {
-  color: var(--accent);
-  text-decoration: none;
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .player {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 22px;
 }
 
@@ -206,8 +210,10 @@ body {
 }
 
 .footer-link {
-  color: var(--accent);
-  text-decoration: none;
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 @media (min-width: 900px) {
